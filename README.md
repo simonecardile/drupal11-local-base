@@ -10,6 +10,7 @@ A modern local Drupal 11 base project built with Composer and Docker.
 - Nginx
 - PHP-FPM
 - Adminer
+- Drush
 
 ## Services
 
@@ -23,5 +24,14 @@ At this stage, the project includes:
 - Composer-managed Drupal 11 project
 - Docker stack with nginx, php-fpm, mysql, and adminer
 - persistent MySQL volume
-- initial config sync directory
-- Drupal installer reachable in the browser
+- Drush installed as a project dependency
+- Admin Toolbar installed as a contrib module
+- config sync directory configured in `settings.php`
+- initial configuration export workflow in `config/sync`
+
+## Notes
+
+- Drupal 11 is Composer-first
+- the web root is `/web`
+- site configuration can be exported to `config/sync`
+- contrib modules are installed with Composer and then enabled in Drupal
