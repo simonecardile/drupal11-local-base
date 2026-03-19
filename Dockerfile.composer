@@ -1,0 +1,17 @@
+FROM php:8.3-cli
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libzip-dev \
+ && docker-php-ext-configure gd --with-freetype --with-jpeg \
+ && docker-php-ext-install -j"$(nproc)" gd zip \
+ && rm -rf /var/lib/apt/lists/*
+
+ENV COMPOSER_HOME=/tmp/composer
+ENV COMPOSER_CACHE_DIR=/tmp/composer/cache

@@ -1,0 +1,25 @@
+{
+  "files.associations": {
+    "*.php": "php",
+    "*.engine": "php",
+    "*.theme": "php",
+    "*.install": "php",
+    "*.inc": "php",
+    "*.make": "php",
+    "*.module": "php",
+    "*.profile": "php",
+    "*.test": "php",
+    "*.info": "ini"
+  },
+  "intelephense.files.associations": [
+    "*.php",
+    "*.engine",
+    "*.theme",
+    "*.install",
+    "*.inc",
+    "*.make",
+    "*.module",
+    "*.profile",
+    "*.test"
+  ]
+}
